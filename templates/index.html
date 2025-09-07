@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block content %}
+<div class="culino-form">
+  <h1>Welcome to Culino 🍳</h1>
+  <h2>What's in your kitchen?</h2>
+
+  <form action="/results" method="POST" class="form-container">
+    <div class="form-group">
+      <label for="ingredients"><strong>Ingredients:</strong></label>
+      <input
+        type="text"
+        id="ingredients"
+        name="ingredients"
+        placeholder="e.g. tomato, rice, cheese"
+        required
+      />
+    </div>
+
+    <fieldset class="dietary-options">
+      <legend><strong>Dietary Preferences:</strong></legend>
+      <label
+        ><input type="checkbox" name="diet" value="vegetarian" />
+        Vegetarian</label
+      >
+      <label
+        ><input type="checkbox" name="diet" value="gluten-free" />
+        Gluten-Free</label
+      >
+      <label
+        ><input type="checkbox" name="diet" value="Non-veg" /> Non-veg</label
+      >
+    </fieldset>
+
+    <button type="submit">Find Recipes</button>
+  </form>
+</div>
+{% endblock %}

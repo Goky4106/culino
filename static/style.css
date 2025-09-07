@@ -1,0 +1,125 @@
+/* 🌼 Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* 🍅 Container for the form */
+.culino-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🧾 Form layout */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* 🥕 Ingredient input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🥗 Dietary checkboxes */
+.dietary-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dietary-options label {
+  font-size: 0.95rem;
+}
+
+/* 🍽️ Submit button */
+button {
+  align-self: center;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 📋 Matched Recipes Styling */
+.recipe-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.recipe-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.recipe-card p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 🔙 Go Back Link */
+a {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 600px) {
+  .culino-form {
+    padding: 1rem;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+  }
+
+  .recipe-card {
+    padding: 1rem;
+  }
+}

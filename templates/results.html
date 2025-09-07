@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block content %}
+<div class="results-container">
+  <h2>Matched Recipes</h2>
+
+  {% if recipes %} {% for recipe in recipes %}
+  <div class="recipe-card">
+    <h3>{{ recipe.name }}</h3>
+    {% if recipe.image %}
+    <img src="{{ recipe.image }}" alt="{{ recipe.name }}" />
+    {% endif %} {% if recipe.ingredients %}
+    <p><strong>Ingredients:</strong> {{ recipe.ingredients | join(', ') }}</p>
+    {% endif %} {% if recipe.instructions %}
+    <p><strong>Instructions:</strong></p>
+    <p>{{ recipe.instructions }}</p>
+    {% endif %}
+  </div>
+  {% endfor %} {% else %}
+  <h3>No matching recipes found 🥲</h3>
+  <p style="color: #888; font-style: italic">
+    Try different ingredients or adjust your filters. Culino’s still cheering
+    for you!
+  </p>
+  {% endif %}
+
+  <a href="/">🔙 Go Back</a>
+</div>
+{% endblock %}
